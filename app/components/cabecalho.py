@@ -4,7 +4,7 @@ import streamlit as st
 def cabecalho(titulo: str, pagina_voltar: str | None = None):
     col_logo, _ = st.columns([1, 5])
     with col_logo:
-        st.image("img/logo-forzy-preta.svg", use_container_width=True)
+        st.image("img/logo-forzy-branca.svg", use_container_width=True)
 
     col_titulo, col_acao = st.columns([5, 1])
     with col_titulo:

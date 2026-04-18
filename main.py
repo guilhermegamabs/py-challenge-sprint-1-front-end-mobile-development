@@ -18,14 +18,6 @@ html, body, [class*="css"], .stMarkdown, .stText, label, p, div {
     background-color: #1A1A1A !important;
 }
 
-[data-testid="stSidebar"] img {
-    opacity: 0.45 !important;
-    transition: opacity 0.3s;
-}
-
-[data-testid="stSidebar"] img:hover {
-    opacity: 0.75 !important;
-}
 
 [data-testid="stSidebarNav"] a {
     border-left: 3px solid transparent;
@@ -99,8 +91,10 @@ paginas = [
 ]
 
 with st.sidebar:
-    st.image("img/logo-forzy-preta.svg", use_container_width=True)
-    st.caption("Sprint 1 — Fundamentos do Ativo")
+    st.markdown(
+        '<p style="text-align:center; color:#888; font-size:0.8rem; margin:0;">Sprint 1 — Fundamentos do Ativo</p>',
+        unsafe_allow_html=True,
+    )
     st.divider()
     st.markdown("**Integrantes**")
     st.caption("Guilherme Gama · RM565293")
