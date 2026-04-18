@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 def cabecalho(titulo: str, pagina_voltar: str | None = None):
     col_logo, _ = st.columns([1, 5])
     with col_logo:

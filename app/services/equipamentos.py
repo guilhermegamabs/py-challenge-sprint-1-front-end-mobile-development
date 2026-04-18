@@ -11,6 +11,7 @@ EQUIPAMENTOS_INICIAIS = [
     {"TAG": "EQ-008", "Modelo": "ProLine-2", "Fabricante": "Schneider", "Potência (W)": 1800, "Tensão (V)": 220},
 ]
 
+
 def get_equipamentos():
     if "equipamentos" not in st.session_state:
         st.session_state["equipamentos"] = list(EQUIPAMENTOS_INICIAIS)

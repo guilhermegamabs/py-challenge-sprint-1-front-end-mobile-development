@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-from app.dados import get_equipamentos, remover_equipamento
-from app.componentes import cabecalho
+from app.services.equipamentos import get_equipamentos, remover_equipamento
+from app.components.cabecalho import cabecalho
 
 @st.dialog("Confirmar remoção")
 def confirmar_remocao(equipamento: dict):
@@ -22,7 +22,7 @@ cabecalho("Consulta de Equipamentos")
 col_novo = st.columns([5, 1])[1]
 with col_novo:
     if st.button("+ Novo Equipamento", type="primary", use_container_width=True):
-        st.switch_page("app/cadastro_equipamento.py")
+        st.switch_page("app/pages/cadastro_equipamento.py")
 
 st.caption("Selecione um equipamento na tabela para acessar o Módulo Técnico.")
 
@@ -88,9 +88,9 @@ if linhas_selecionadas:
         )
     with col_acoes:
         if st.button("Abrir Módulo Técnico", type="primary", use_container_width=True):
-            st.switch_page("app/modulo_tecnico.py")
+            st.switch_page("app/pages/modulo_tecnico.py")
         if st.button("Dados Brutos", use_container_width=True):
-            st.switch_page("app/dados_brutos.py")
+            st.switch_page("app/pages/dados_brutos.py")
         if st.button("Remover", use_container_width=True):
             confirmar_remocao(equipamento)
 

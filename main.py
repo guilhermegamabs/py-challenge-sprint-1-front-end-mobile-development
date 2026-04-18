@@ -92,10 +92,10 @@ hr {
 """, unsafe_allow_html=True)
 
 paginas = [
-    st.Page("app/consulta_equipamentos.py", title="Consulta de Equipamentos", default=True),
-    st.Page("app/cadastro_equipamento.py", title="Novo Equipamento"),
-    st.Page("app/modulo_tecnico.py", title="Módulo Técnico"),
-    st.Page("app/dados_brutos.py", title="Dados Brutos"),
+    st.Page("app/pages/consulta_equipamentos.py", title="Consulta de Equipamentos", default=True),
+    st.Page("app/pages/cadastro_equipamento.py",  title="Novo Equipamento"),
+    st.Page("app/pages/modulo_tecnico.py",        title="Módulo Técnico"),
+    st.Page("app/pages/dados_brutos.py",          title="Dados Brutos"),
 ]
 
 with st.sidebar:
